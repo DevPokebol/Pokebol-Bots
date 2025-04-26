@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokebol bots & script MTA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">Pokebol bots & script MTA</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Strona główna</a></li>
+            <li><a href="#" onclick="showSection('about')">O mnie</a></li>
+            <li><a href="#" onclick="showSection('contact')">Kontakt</a></li>
+            <li><a href="#" onclick="showSection('orders')">Zamówienia</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="section">
+        <h2>Witaj drogi użydkowniku!</h2>
+        <p>Specjalizuję się w tworzeniu botów discord oraz skryptów MTA jeżeli chcesz dowiedzieć się więcej wejdź w zakładkę "O mnie"</p>
+    </section>
+
+    <section id="about" class="section">
+        <h2>O mnie</h2>
+        <p>Cześć! Nazywam się Marcel, ale w sieci jestem znany jako Pokebol.</p>
+        <h2>Boty discord</h2>
+        <p>Od kilkunastu miesięcy specjalizuję się w tworzeniu botów Discord, zarówno dla siebie, jak i na zamówienie. Tworzyłem boty z wieloma funkcjami, od ułatwienia moderacji serwera po integrację z popularnymi serwerami, takimi jak MTA czy FiveM. Stworzę dla Ciebie bota, który pomoże w moderacji serwera lub zintegruję Twój serwer Discord z odpowiednimi systemami, abyś mógł np. szybko resetować hasła. Potrafię stworzyć bota dostosowanego do Twoich indywidualnych potrzeb – wystarczy, że napiszesz, jakie funkcje chciałbyś mieć! Jeśli szukasz niezawodnego bota, który pomoże w moderacji Twojego serwera lub zintegruje go z MTA czy FiveM, z chęcią Ci pomogę!</p>
+        <h2>Skrypty MTA</h2>
+        <p>Od kilku miesięcy zajmuję się programowaniem w MTA Lua, tworząc skrypty, które poprawiają jakość rozgrywki oraz zarządzania serwerami. Moje projekty obejmują różnorodne funkcje, od administracyjnych narzędzi, po unikalne mechaniki, które wzbogacają doświadczenia graczy. Jeśli potrzebujesz skryptu MTA Lua, który idealnie dopasuje się do Twoich wymagań – jestem w stanie stworzyć coś, co odpowiada Twojej wizji. Niezależnie od tego, czy chodzi o integrację z innymi systemami, nowe komendy, czy unikalne elementy rozgrywki – wszystko zależy od tego, czego szukasz. Jeśli chcesz dodać coś wyjątkowego na swoim serwerze lub potrzebujesz pomocy w rozwoju swojego projektu, chętnie Ci pomogę i zaplanuję rozwiązanie, które sprawi, że Twój serwer stanie się jeszcze lepszy</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Kontakt</h2>
+        <p>Discord: <strong>.pokebol</strong></p>
+        <p>Email: <strong>soon</strong></p>
+    
+        <a href="https://discord.gg/TWÓJ-LINK" target="_blank" class="discord-button">Mój serwer Discord</a>
+    </section>
+
+    <section id="orders" class="section" style="display: none;">
+        <h2>Zamówienia</h2>
+        <form action="https://formspree.io/f/xdkgklar" method="POST" class="order-form">
+            <label for="message">Opisz swoje zamówienie:</label><br>
+            <textarea name="message" id="message" rows="8" placeholder="Wpisz szczegóły zamówienia..." required></textarea><br>
+            <button type="submit">Wyślij</button>
+            <p>UWAGA: podaj swój AKTUALNY email abyśmy mogli się z tobą skontaktować</p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Pokebol bots & script MTA | Wszystkie prawa zastrzeżone</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
