@@ -6,7 +6,6 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #fff;
-    scroll-behavior: smooth;
 }
 
 /* Header */
@@ -14,8 +13,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.6);
     position: fixed;
     width: 100%;
     top: 0;
@@ -23,20 +22,20 @@ header {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
@@ -44,15 +43,28 @@ nav ul li a:hover {
     color: #00ffea;
 }
 
+/* Main Content */
+main {
+    margin-top: 100px; /* Offset under fixed header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+}
+
 /* Sections */
 .section {
-    padding: 120px 20px;
-    min-height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.section.active {
+    display: flex;
 }
 
 /* Order Form */
@@ -60,7 +72,7 @@ nav ul li a:hover {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     max-width: 500px;
 }
 
@@ -70,6 +82,7 @@ nav ul li a:hover {
     border: none;
     margin-top: 10px;
     font-size: 1rem;
+    resize: vertical;
 }
 
 .order-form button {
@@ -97,16 +110,17 @@ footer {
     margin-top: 20px;
 }
 
+/* Discord Button */
 .discord-button {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 24px;
-    background-color: #5865F2; /* kolor Discorda */
+    background-color: #5865F2;
     color: #fff;
     font-weight: bold;
     text-decoration: none;
     border-radius: 30px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: background-color 0.3s;
 }
 
@@ -114,13 +128,30 @@ footer {
     background-color: #4752c4;
 }
 
+/* Text and Headings */
 .section p {
     margin: 15px 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
-/* Odstępy między nagłówkami */
 .section h2 {
     margin: 30px 0 15px 0;
     font-size: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        display: none;
+    }
+    nav ul.show {
+        display: flex;
+    }
 }

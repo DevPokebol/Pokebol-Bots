@@ -1,12 +1,10 @@
-// Funkcja pokazywania sekcji
 function showSection(sectionId) {
-    const sections = document.querySelectorAll('main > section');
+    const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
-        section.style.display = 'none';
+        section.classList.remove('active');
     });
-
-    const activeSection = document.getElementById(sectionId);
-    if (activeSection) {
-        activeSection.style.display = 'flex';
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.classList.add('active');
     }
 }
