@@ -8,3 +8,20 @@ function showSection(sectionId) {
         targetSection.classList.add('active');
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = lightbox.querySelector('img');
+
+    document.querySelectorAll('.gallery-container img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImage.src = img.src;
+            lightbox.classList.add('active');
+        });
+    });
+
+    lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        lightboxImage.src = '';
+    });
+});
